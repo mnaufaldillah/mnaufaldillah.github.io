@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+
+        <title>Toggle Effect</title>
+
+        <style type="text/css">
+            body
+            {
+                font-size: 12px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #button
+            {
+                font-size: 12px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+
+        <style>
+            .toggler 
+            {
+                margin-left: 553px;
+                margin-top: 160px;
+                width: 500px;
+                height: 200px;
+                position: relative;
+            }
+
+            #button
+            {
+                margin-left: 620px;
+                padding: .5em 1em; 
+                text-decoration: none;
+            }
+
+            #effect
+            {
+                width: 240px;
+                height: 170px;
+                padding: 0.4em;
+                position: relative;
+            }
+
+            #effect h3
+            {
+                margin: 0;
+                padding: 0.4em;
+                text-align: center;
+            }
+
+            body
+            {
+                background-image: url(image/show.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                height: 100%;
+            }
+        </style>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+        <script>
+            $( function() 
+            {
+              var state = true;
+              $( "#button" ).on( "click", function() 
+              {
+                if ( state ) 
+                {
+                  $( "#effect" ).animate
+                  ({backgroundColor: "rgb(238, 108, 77)", width: 500}, 1000 );
+                } 
+                else 
+                {
+                  $( "#effect" ).animate
+                  ({backgroundColor: "rgb(255, 255, 255)", width: 240}, 1000 );
+                }
+                state = !state;
+              });
+            } );
+        </script>
+    </head>
+
+    <body>
+        <div class="toggler">
+            <div id="effect" class="ui-widget-content ui-corner-all">
+                <h3 class="ui-widget-header ui-coner-all">Animate</h3>
+            </div>
+        </div>
+
+        <button id="button" class="ui-state-default ui-corner-all">Toggle Effect</button>
+    </body>
+</html>
