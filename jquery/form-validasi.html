@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Validasi Form dengan JQuery Validation</title>
+        <style type="text/css">
+            .labelfirm {
+                display: block;
+                font-size: small;
+                margin-top: 5px;
+            }
+            .error {
+                font-size: small;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Input Data Mahasiswa</h1>
+        <form action="action.php" method="post" id="frm-mhs">
+            <label for="nim" class="labelfrm">NIM: </label>
+            <input type="text" name="nim" id="nim" maxlength="10" class="required" size="15"/>
+
+            <label for="nama" class="labelfrm">NAMA: </label>
+            <input type="text" name="nama" id="nama" size="30" class="required"/>
+
+            <label for="alamat" class="labelfrm">ALAMAT: </label>
+            <textarea name="alamat" id="alamat" cols="40" rows="4" class="required"></textarea>
+
+            <label for="tgl" class="labelfrm">TANGGAL </label>
+        </form>
+    </body>
+</html>
