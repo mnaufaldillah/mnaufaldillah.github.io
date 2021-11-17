@@ -1,0 +1,74 @@
+.navigasi-title .tb-menu a {
+    text-decoration: none;
+    color: #1c0c5c;
+    font-weight: bold;
+}
+
+.navigasi-title {
+    background-color: #f8f4fc;
+    height: 150px;
+    padding-top: 35px;
+}
+
+.container-1 {
+    text-align: center;
+    background-color: #FFFFFF;
+    opacity: 0.94;
+    margin: 70px auto;
+    padding-top: 30px;
+    width: 500px;
+    height: 430px;
+    border-radius: 1px;
+    box-shadow: 0px 0px 10px 1px #88888835;
+}
+
+input {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    width: 30px;
+    height: 50px;
+    padding-left: 5px;
+    border-radius: 10px;
+    border-color: rgba(71, 75, 99, 0.2);
+}
+
+.daftar-but button {
+    width: 330px;
+}
+
+.headline h1 {
+    color: #1c0c5c;
+    font-weight: bold;
+}
+
+.headline p {
+    margin-top: -5px;
+    margin-bottom: 30px;
+    color: grey;
+}
+
+.pass a {
+    text-decoration: none;
+    color: grey;
+}
+
+.pass p {
+    margin-top: -10px;
+}
+
+.daftar-but button {
+    background: #ff2c84;
+    border: 2px solid #ff2c84;
+    border-radius: 1px;
+    margin-bottom: 10px;
+}
+
+.daftar-but-1 button {
+    background: #ff2c84;
+    border: 2px solid #ff2c84;
+}
+
+.reg a {
+    text-decoration: none;
+    color: grey;
+}
