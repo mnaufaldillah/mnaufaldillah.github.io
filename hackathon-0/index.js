@@ -269,6 +269,8 @@ const winLose = () => {
     } else if (allDetails.dealer.score === allDetails.player.score) {
         reverseBack.src = allDetails.dealer.deck[1].src;
         winLoseNoti.innerText = `It's a draw`;
+        allDetails.player.chip += Number(allDetails.player.bet);
+        chipBet();
         winLoseNoti.style.display = 'inline';
         clickDouble.style.display = 'none';
         clickStand.style.display = 'none';
