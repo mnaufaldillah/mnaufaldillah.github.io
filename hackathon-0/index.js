@@ -122,10 +122,31 @@ const start = () => {
     dealerBack.style.left = '23px';
     dealerWeb.appendChild(dealerBack);
 
-    if ((allDetails.dealer.score + Number(allDetails.dealer.deck[1].name))=== 21) {
+    let cek = 0;
+    if (Number(allDetails.dealer.deck[1].name)) {
+        cek = Number(allDetails.dealer.deck[1].name);
+    } else {
+        switch (allDetails.dealer.deck[1].name) {
+            case 'J':
+            case 'Q':
+            case 'K':
+                cek = 10;
+                break;
+            case 'As':
+                cek = 11;
+                break;
+
+        }
+    };
+
+    if ((allDetails.dealer.score + cek) === 21) {
         winLose();
+        clickDouble.style.display = 'none';
+        clickStand.style.display = 'none';
+        clickHit.style.display = 'none';
+        nextGame.style.display = 'inline-block';
     } else if (allDetails.player.score === 21) {
-        winLose();
+        stand();
     }
 }
 
@@ -360,6 +381,7 @@ clickHit.addEventListener('click', function() {
     hit();
     if (allDetails.player.score > 20) {
         clickHit.style.display = 'none';
+        stand();
         winLose();
         const reverseBack = document.querySelector('#back');
         reverseBack.src = allDetails.dealer.deck[1].src;
