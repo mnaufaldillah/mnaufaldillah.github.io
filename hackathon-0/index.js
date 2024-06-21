@@ -116,7 +116,7 @@ const start = () => {
     dealerCard.style.width = '120px';
     dealerWeb.appendChild(dealerCard);
     const dealerBack = document.createElement('img');
-    dealerBack.src = '/img/back.png';
+    dealerBack.src = 'img/back.png';
     dealerBack.id = 'back';
     dealerBack.style.width = '120px';
     dealerBack.style.left = '23px';
