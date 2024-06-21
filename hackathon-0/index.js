@@ -306,11 +306,16 @@ gamePlay.addEventListener('click', function(){
 
 const inputChip = document.querySelector('#form-chip');
 inputChip.addEventListener('change', function(event) {
-    allDetails.player.chip = Number(event.target.value);
-    const form = document.querySelector('#form-chip');
-    form.style.display = 'none';
-    gameStart.style.display = 'inline';
-})
+    if (Number(event.target.value) > 0) {
+        allDetails.player.chip = Number(event.target.value);
+        const form = document.querySelector('#form-chip');
+        form.style.display = 'none';
+        gameStart.style.display = 'inline';
+    } else {
+        const form = document.querySelector('#form-chip');
+        form.style.display = 'inline';
+    };
+});
 
 gameStart.addEventListener('click', function(){
     gameStart.remove()
