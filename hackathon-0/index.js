@@ -404,4 +404,5 @@ nextGame.addEventListener('click', function () {
     form.style.display = 'inline';
     const winLoseNoti = document.querySelector('#winLose');
     winLoseNoti.style.display = 'none';
+    nextGame.style.display = 'none';
 });
